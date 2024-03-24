@@ -8,9 +8,12 @@
 
 body{
     overflow-x: hidden;
-    background-image: url(./assets/homepage\ image.png);
+    background-image: url(./assets/Untitled\ design\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: rgb(14, 12, 12);
 }
+
 
 section{
     display: block;
@@ -48,7 +51,7 @@ h1 {
   p{
     color: #fff;
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
   }
   
@@ -58,21 +61,13 @@ h1 {
     height: 80px;
   }
 
-  .img__glow--effect{
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  .img__glow--effect:hover{
-    box-shadow: 0 0 20px 5px rgba(200, 0, 255, 0.7);
-    cursor: pointer;
-  }
-
   ul {
     display: flex;
     align-items: center;
   }
 
   button {
-    transition: all ease 0.3s;
+    transition: all ease 300s;
     cursor: pointer;
   }
   
@@ -80,7 +75,7 @@ h1 {
     padding: 16px 32px;
     border-radius: 25px;
     border: none;
-    background-color: #67089e;
+    background-color: #b026ff;
     font-size: 14px;
     color: #fff;
     font-weight: 600;
@@ -90,6 +85,19 @@ h1 {
   .btn:hover {
     box-shadow: 0 0 5px #b026ff, 0 0 25px #b026ff, 0 0 50px #b026ff, 0 0 100px #b026ff, 0 0 200px #b026ff;
   }
+
+
+/*
+
+CURVES
+
+*/
+
+
+
+
+
+
 
 /*
 
@@ -124,6 +132,10 @@ NAV
     box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
   }
 
+  .nav__cursor{
+    cursor: not-allowed;
+  }
+
 
 /*
 
@@ -147,8 +159,40 @@ LANDING PAGE
 }
 
 
+.searchbar{
+  position: relative;
+}
+
+.header__input{
+  background-color: black;
+  border-radius: 100px;
+  color: white;
+  border: 2px solid #67089e;
+  font-size: 16px;
+  font-weight: 500;
+  transition: border-color 300ms ease;
+  padding: 16px 32px;
+  width: 100%;
+}
+
+.header__input:hover{
+border-color: #b026ff;  
+}
+
+.search__btn{
+  position: absolute;
+  right: 0;
+  margin: 10px 14px 0 0;
+  padding: 8px;
+  width: 80px;
+  
+}
+
 .glow__effect{
   transition: text-shadow 0.3s ease-in-out;
+  text-shadow: 0 0 10px #b026ff, 
+  0 0 20px #67089e, 
+  0 0 30px #b026ff;
 }
 
 .glow__effect:hover{
@@ -157,46 +201,10 @@ LANDING PAGE
   0 0 30px #b026ff;
   cursor: pointer;
 }
-/*
+
+@media (max-width: 550px) {
+  
 
 
-<div class="search__container">
-                            <form action="">
-                                <input class="search__toggle" type="search" placeholder="Search...">
-                                <i class="fas fa-search"></i>
-                            </form>
-                        </div>
-.search__container{
-  position: relative;
-}
 
-.search__toggle{
-  width: 160px;
-  padding: 8px 20px 8px 45px;
-  border: 2px solid #8003c9;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 25px;
-  background-color: transparent;
-  transition: all ease;
-}
-
-.search__toggle:focus{
-  width: 350px;
-  background-color: #8003c9;
-  transition: all ease;
-}
-
-.fa__search{
-  position: absolute;
-  right: 0;
-  margin: 8px 8px 8px 0;
-  padding: 14px 0;
-  width: 160px;
-  text-align: center;
-  border-radius: 9999px;
-  font-size: 16px;
-  color: #f7fafc;
-  font-weight: bold;
-  line-height: 1.5;
 }
