@@ -6,12 +6,32 @@
     font-family: "Roboto", "sans-serif";
 }
 
-body{
+.homepage{
     overflow-x: hidden;
     background-image: url(./assets/Untitled\ design\ \(1\).png);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgb(14, 12, 12);
+}
+
+/*.overlay{
+  background-image: url(./assets/inner__banner.png);
+  background-repeat: no-repeat;
+  background-position: 50% center;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+    object-fit: fill;
+    position: absolute;
+    inset: 0px;
+    z-index: 1;
+    opacity: 0.5;
+
+}
+*/
+
+body{
+  background-color:black;
 }
 
 
@@ -60,6 +80,10 @@ h1 {
     width: 80px;
     height: 80px;
   }
+  
+  .header__logo{
+  margin-left: 32px;
+}
 
   ul {
     display: flex;
@@ -89,27 +113,17 @@ h1 {
 
 /*
 
-CURVES
-
-*/
-
-
-
-
-
-
-
-/*
-
 NAV
 
 */
-
 .nav{
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
+    position: relative;
+
 }
   
   .nav__link {
@@ -124,6 +138,11 @@ NAV
     transition: all 300ms ease;
   }
   
+
+.navs__link{
+  background-color: #b026ff;
+}
+
   .link__hover--effect{
     transition: 300ms ease;
   }
@@ -136,6 +155,9 @@ NAV
     cursor: not-allowed;
   }
 
+  .title{
+    color: white;
+  }
 
 /*
 
@@ -145,8 +167,20 @@ LANDING PAGE
 
 
 #landing__page{
-    padding: 32px 32px 0 32px;
+  padding: 32px 32px 0 32px;
 }
+
+.inner__landing--page{
+  padding: 0 42px;
+  display: flex;
+  justify-content: center;
+}
+
+/*
+
+HEADER
+
+*/
 
 .header_row{
     width: 50%;
@@ -158,6 +192,33 @@ LANDING PAGE
   width: 40%;
 }
 
+.header__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 24px;
+}
+
+.content__wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+.title{
+  text-align: center;
+    letter-spacing: 0.1em;
+    font-size: 52px;
+    margin: 40px;
+}
+
+.search{
+  display: flex;
+}
 
 .searchbar{
   position: relative;
@@ -175,6 +236,7 @@ LANDING PAGE
   width: 100%;
 }
 
+
 .header__input:hover{
 border-color: #b026ff;  
 }
@@ -185,7 +247,10 @@ border-color: #b026ff;
   margin: 10px 14px 0 0;
   padding: 8px;
   width: 80px;
-  
+}
+
+.header__btn{
+  text-align: center;
 }
 
 .glow__effect{
@@ -202,9 +267,22 @@ border-color: #b026ff;
   cursor: pointer;
 }
 
-@media (max-width: 550px) {
-  
+/*
+
+small phones, tablets and large mobile phones
 
 
 
-}
+@media (max-width:768px)
+
+
+/* 
+
+SMALL PHONES, LARGE SMARTPHONES
+
+
+
+@media (max-width: 550px)
+
+
+*/
