@@ -267,6 +267,24 @@ border-color: #b026ff;
   cursor: pointer;
 }
 
+
+
+
+
+/*
+
+MOVIES RESULTS
+
+
+*/
+
+.movie__poster{
+  width: 100%;
+  margin: 10px;
+}
+
+
+
 /*
 
 small phones, tablets and large mobile phones
