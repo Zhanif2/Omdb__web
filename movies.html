@@ -19,7 +19,7 @@
                     <img class="logo__img header__logo " src="./assets/logo.png" alt="logo__img">
                 </div>
                 <ul class="nav__links">
-                    <li><a href="#" class="nav__link navs__link link__hover--effect">Home</a></li>
+                    <li><a href="./index.html" class="nav__link navs__link link__hover--effect">Home</a></li>
                     <li><a href="#" class="nav__link navs__link link__hover--effect nav__cursor">Popular</a></li>
                     <li><a href="#" class="nav__link navs__link link__hover--effect nav__cursor">New Releases</a></li>
                 </ul>
@@ -28,15 +28,15 @@
                 <div class="content__wrapper">
                     <h1 class="title glow__effect">Browse Movies</h1>
                     <div class="searchbar search">
-                    <input id="gameSearch" type="text" class="header__input" placeholder="Search...">
-                  <i class="fas fa-search btn search__btn header__btn"></i>
+                    <input id="movie__search" type="text" class="header__input" placeholder="Search...">
+                    <i class="fas fa-search btn search__btn header__btn" onclick="searchMovies()"></i>
                     </div>
                 </div>
             </div>
         </div>
         <div class="overlay"></div>
         <div  id= result__container class="results__container">
-            
+
         </div>
     </section>
 </body>
