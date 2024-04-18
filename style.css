@@ -46,7 +46,8 @@ section{
 
 .row{
     width: 100%;
-    max-width: 1200px;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 .column{
@@ -66,6 +67,11 @@ h1 {
     font-size: 48px;
     color: #fff;
     margin-bottom: 20px;
+  }
+
+  h3{
+    color: #fff;
+    font-size: 24px;
   }
 
   p{
@@ -274,7 +280,12 @@ border-color: #b026ff;
 }
 
 
-
+.header__popular{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 48px;
+}
 
 
 /*
@@ -287,6 +298,20 @@ MOVIES RESULTS
 .movie__poster{
   width: 100%;
   margin: 10px;
+}
+
+.movies__container{
+  padding: 80px 24px;
+}
+
+.filter{
+  background-color:#b026ff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 
