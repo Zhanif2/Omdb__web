@@ -27,7 +27,7 @@ async function searchMovies() {
     });
 }
 */
-
+/*
 function searchMovies() {
     const apiKey = 'http://www.omdbapi.com/?i=tt3896198&apikey=598682cb';
     const searchInput = document.getElementById('movie__search').value.trim(); // Use your custom input ID
@@ -74,3 +74,13 @@ function displayMovies(movies) {
         moviesContainer.appendChild(movieElement);
     }
 }
+*/
+
+
+async function searchMovies(){
+    const searchInput = await fetch("http://www.omdbapi.com/?i=tt3896198&apikey=598682cb")
+    const input = await searchInput.json();
+    console.log(input)
+}
+
+searchMovies();

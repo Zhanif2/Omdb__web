@@ -81,14 +81,17 @@ h1 {
     height: 80px;
   }
   
-  .header__logo{
-  margin-left: 32px;
-}
+  
 
   ul {
     display: flex;
     align-items: center;
   }
+
+  .cursor{
+    cursor: pointer;
+  }
+
 
   button {
     transition: all ease 300s;
@@ -190,6 +193,9 @@ HEADER
 
 .header__content{
   width: 40%;
+}
+.header__logo{
+  margin-left: 32px;
 }
 
 .header__container {
