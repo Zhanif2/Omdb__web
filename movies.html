@@ -8,7 +8,7 @@
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous">
     </script>
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
     <script src="movies.js"></script>
 </head>
 <body>
@@ -28,8 +28,8 @@
                 <div class="content__wrapper">
                     <h1 class="title glow__effect">Browse Movies</h1>
                     <div class="searchbar search">
-                    <input id="movie__search" type="text" class="header__input" placeholder="Search...">
-                    <i class="fas fa-search btn search__btn header__btn" onclick="searchMovies()"></i>
+                    <input id="movie__search" type="text" class="header__input" placeholder="Search..."onchange="onSearchChange(event)">
+                    <i class="fas fa-search btn search__btn header__btn" ></i>
                     </div>
                 </div>
             </div>
@@ -48,17 +48,12 @@
                         </select>
                     </div>
                 </div>
-                <div class="movies__container">
-                    <div class="movie__wrapper">
+                <div class="movie__container">
+                    <div class="movie__poster">
                         <figure class="movie__img--wrapper">
-                            <img src="" alt="" class="movie__img">
+                            <img src="" alt="">
                         </figure>
                         <span class="movie__title"></span>
-                    </div>
-                    <div class="movie__overlay not__allowed">
-                        <p class="overlay__text">
-                            .
-                        </p>
                     </div>
                 </div>
             </div>

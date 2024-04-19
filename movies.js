@@ -1,32 +1,4 @@
 //API KEY: http://www.omdbapi.com/?i=tt3896198&apikey=598682cb
-
-/* Function to search movies based on user input
-async function searchMovies() {
-    const searchInput = document.getElementById('movie__search').value;
-
-    // Fetch movie data from an API (example using OMDB API)
-    const response = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=598682cb
-    &s=${movie__search}`);
-    const data = await response.json();
-
-    // Get the first 6 movies from the search results
-    const movies = data.Search.slice(0, 6);
-
-    // Clear previous search results
-    const resultsContainer = document.getElementById('result__container');
-    result__container.innerHTML = '';
-
-    // Display movie posters
-    movies.forEach(movie => {
-        const posterUrl = movie.Poster;
-        const moviePoster = document.createElement('img');
-        moviePoster.src = posterUrl;
-        moviePoster.alt = movie.Title;
-        moviePoster.classList.add('movie__poster');
-        resultsContainer.appendChild(moviePoster);
-    });
-}
-*/
 /*
 function searchMovies() {
     const apiKey = 'http://www.omdbapi.com/?i=tt3896198&apikey=598682cb';
@@ -76,11 +48,43 @@ function displayMovies(movies) {
 }
 */
 
+//API KEY: http://www.omdbapi.com/?i=tt3896198&apikey=598682cb
 
-async function searchMovies(){
-    const searchInput = await fetch("http://www.omdbapi.com/?i=tt3896198&apikey=598682cb")
-    const input = await searchInput.json();
-    console.log(input)
+
+async function onSearchChange(event) {
+    const movieSearch = event.target.value
+    const searchDataEl = document.querySelector('.movie__container')
+    const response = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=598682cb&s=${movieSearch}`);
+    const searchData = await response.json();
+    if (searchData.Search){
+        searchDataEl.innerHTML = searchData.Search.map(movie => searchHTML(movie)).join("");
+    }
+    else{
+        console.error('no movies found')
+    }
 }
 
-searchMovies();
+function searchHTML(movie){
+    return `<div class="movie__poster">
+        <figure class="movie__img--wrapper">
+            <img src="${movie.Poster}" alt="">
+        </figure>
+        <span class="${movie.Title}"></span>
+    </div>
+</div>`;
+}
+
+
+async function navigateToPage(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+    const movieSearch = document.getElementById('movie__search').value;
+    window.location.href = `/inner-page.html?search=${encodeURIComponent(movieSearch)}`;
+}
+
+
+
+
+
+
+
+

@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous">
     </script>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <script src="movies.js"></script>
 </head>
 
@@ -39,8 +39,8 @@
                             <h1>Welcome to <span class="glow__effect">FilmFlow</span></h1>
                             <p>The best platform to discover new movies and Tv shows. Start exploring now for endless cinematic adventures.</p>
                             <div class="searchbar">
-                                <input id="movie__search" type="text" class="header__input" placeholder="Search...">
-                            <button class="btn search__btn" type="submit" onclick="navigateToPage()">
+                                <input id="movie__search" type="text" class="header__input" placeholder="Search..." onchange="onSearchChange(event)" onkeypress="naviagateToPage(event)">
+                            <button class="btn search__btn" type="submit" onclick="navigateToBrowseMovies()">
                                 <i class="fas fa-search"></i>
                             </button>
 
