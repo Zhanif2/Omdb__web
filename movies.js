@@ -12,6 +12,7 @@ async function onSearchChange(event) {
     }
     else{
         console.error('no movies found')
+        searchDataEl.innerHTML = '<p>No movies found</p>';
     }
 
     
@@ -22,9 +23,11 @@ function searchHTML(movie){
         <figure class="movie__img--wrapper">
             <img src="${movie.Poster}" alt="">
         </figure>
-        <span class="${movie.Title}"></span>
-    </div>
-</div>`;
+        <div class="movie__info">
+            <h3 class="movie__title">${movie.Title}</h3>
+            <p class="movie__year">${movie.Year}</p>
+            </div>
+        </div>`;
 }
 
 
