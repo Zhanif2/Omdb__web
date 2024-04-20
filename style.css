@@ -6,6 +6,11 @@
     font-family: "Roboto", "sans-serif";
 }
 
+
+html{
+  scroll-behavior: smooth;
+}
+
 .homepage{
     overflow-x: hidden;
     background-image: url(./assets/Untitled\ design\ \(1\).png);
@@ -78,6 +83,9 @@ h1 {
     cursor: pointer;
     
   }
+
+
+  
   
   .no__transition:hover{
   transition: none;
@@ -379,7 +387,7 @@ img{
 }
 
 img:hover{
-  box-shadow: 0 0 10px #b026ff, 
+  box-shadow: 0 0 10px #4fc3f7, 
   0 0 20px #67089e, 
   0 0 30px #b026ff;
   transform: scale(1.07);

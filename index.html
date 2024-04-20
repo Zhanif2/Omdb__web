@@ -18,12 +18,31 @@
         <div class="row">
             <div class="nav">
                 <div class="logo ">
-                    <img class="logo__img cursor " src="./assets/logo.png" alt="logo__img" onclick="navigateHome()">
+                    <img class="logo__img cursor no__transition" src="./assets/logo.png" alt="logo__img" onclick="navigateHome()">
                 </div>
                 <ul class="nav__links">
                     <li><a href="#" class="nav__link link__hover--effect">Home</a></li>
                     <li><a href="#" class="nav__link link__hover--effect nav__cursor">Popular</a></li>
                     <li><a href="#" class="nav__link link__hover--effect nav__cursor">New Releases</a></li>
+                </ul>
+            </div>
+            <button class="btn__menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+                <button class="btn__menu btn__menu--close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link">Home</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link nav__cursor">Popular</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link nav__cursor">New Releases</a>
+                    </li>
                 </ul>
             </div>
         </div>
