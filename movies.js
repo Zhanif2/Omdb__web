@@ -73,10 +73,10 @@ function hideLoadingState() {
 
 
 function showDelay(delayMs, callback) {
-    showLoadingState(); // Show loading state immediately
+    showLoadingState(); 
     setTimeout(() => {
-        callback(); // Invoke callback after delay
-        hideLoadingState(); // Hide loading state after callback completes
+        callback(); 
+        hideLoadingState(); 
     }, delayMs);
 }
 

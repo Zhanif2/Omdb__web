@@ -13,7 +13,6 @@ function navigateToBrowseMovies() {
 
 
 //burger menu
-
 function openMenu(){
     document.body.classList += " menu--open"
     }
