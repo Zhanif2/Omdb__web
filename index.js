@@ -10,8 +10,3 @@ function navigateHome() {
 function navigateToBrowseMovies() {
     window.location.href = 'movies.html';
 }
-function naviagateToPage(event) {
-    if (event.key === 'Enter') {
-        navigateToBrowseMovies();
-    }
-}
