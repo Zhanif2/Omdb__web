@@ -59,6 +59,11 @@ h1 {
     font-size: 24px;
   }
 
+  h4{
+    color: #fff;
+    font-size: 14px;
+  }
+
   p{
     color: #fff;
     margin-bottom: 20px;
@@ -70,10 +75,16 @@ h1 {
   .logo__img{
     width: 80px;
     height: 80px;
+    cursor: pointer;
+    
   }
   
+  .no__transition:hover{
+  transition: none;
+  transform: none;
+  box-shadow: none;
+}
   
-
   ul {
     display: flex;
     align-items: center;
@@ -329,11 +340,6 @@ MOVIES RESULTS
   
 }
 
-img{
-  overflow: hidden;
-  border-radius: 30px;
-}
-
 .movie-img {
   width: 100%;
   max-width: 200px;
@@ -363,30 +369,22 @@ img{
   margin: 0 auto;
 }
 
-/*
-.movie__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    display: none;
-    height: 202px;
-    transform: translateX(-100%);
-    transition: all 0.5s ease-in-out;
+
+img{
+  overflow: hidden;
+  border-radius: 30px;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  cursor: not-allowed;
 }
 
-.overlay__text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
+img:hover{
+  box-shadow: 0 0 10px #b026ff, 
+  0 0 20px #67089e, 
+  0 0 30px #b026ff;
+  transform: scale(1.07);
 }
 
-*/
 
 
 /*
@@ -561,6 +559,5 @@ LOADING STATE
   font-size: 14px;
   padding: 8px 16px;
 }
-
 
 }
