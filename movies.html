@@ -23,6 +23,25 @@
                     <li><a href="#" class="nav__link navs__link link__hover--effect nav__cursor">Popular</a></li>
                     <li><a href="#" class="nav__link navs__link link__hover--effect nav__cursor">New Releases</a></li>
                 </ul>
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list">
+                            <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#" class="menu__link nav__cursor" onclick="closeMenu()">Popular</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#" class="menu__link nav__cursor" onclick="closeMenu()">New Releases</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             
             <div class="header__container">

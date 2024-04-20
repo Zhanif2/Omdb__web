@@ -84,8 +84,6 @@ h1 {
     
   }
 
-
-  
   
   .no__transition:hover{
   transition: none;
@@ -174,6 +172,76 @@ NAV
   .title{
     color: white;
   }
+
+  .btn__menu {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-size: 40px;
+    color: #b026ff;
+    display: none;
+  }
+
+  .menu--open{
+    max-height: 100vh;
+    overflow-y: hidden;
+  }
+
+.menu__backdrop{
+  position: fixed;
+  background-color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu--open .menu__backdrop{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.menu__list{
+  padding: 32px 0;
+}
+
+
+.menu__link{
+  color: white;
+  font-size: 40px;
+}
+
+.menu__link:hover{
+  text-shadow: 0 0 10px #b026ff, 
+  0 0 20px #67089e, 
+  0 0 30px #b026ff,
+  0 0 40px #67089e,
+  0 0 50px #b026ff;
+}
+
+.menu__links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.btn__menu--close{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 24px;
+}
+
+
 
 /*
 
@@ -387,9 +455,10 @@ img{
 }
 
 img:hover{
-  box-shadow: 0 0 10px #4fc3f7, 
-  0 0 20px #67089e, 
-  0 0 30px #b026ff;
+  box-shadow: 0 0 5px #b026ff, 
+  0 0 25px #b026ff, 
+  0 0 50px #67089e;
+
   transform: scale(1.07);
 }
 
@@ -493,8 +562,8 @@ LOADING STATE
     height: 60px;
   }
 
-  .nav__links{
-    display: none;
+  .nav__link{
+    background-color: #b026ff;
   }
 
   .homepage{
@@ -547,6 +616,19 @@ LOADING STATE
         padding-right: 10px;
       }
 
+
+      .nav__links{
+        display: none;
+      }
+
+      .btn__menu{
+        display: block;
+      }
+
+      .menu__link{
+        font-size: 28px;
+      }
+
       .movie__poster{
         width: calc(100% / 1);
       }
@@ -562,8 +644,20 @@ LOADING STATE
       }
     }
 
+
+
+    
 @media (max-width: 550px){
-.header__input{
+
+h1, p{
+  text-align: center;
+}
+
+.browse__btn{
+  margin-left: 30%;
+}
+
+  .header__input{
   font-size: 14px;
   padding: 8px 16px;
 }
