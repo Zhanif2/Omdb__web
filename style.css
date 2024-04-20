@@ -662,4 +662,9 @@ h1, p{
   padding: 8px 16px;
 }
 
+.search__btn{
+  margin: 6px 6px 0 4px;
+  padding: 6px;
+}
+
 }
