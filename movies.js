@@ -25,8 +25,11 @@ async function onSearchChange(event) {
 }
 
 function filterMovies(event) {
-    renderFilteredMovies(event.target.value);
+    const filterValue = event.target.value;
+    showDelay(1000, () => {
+    renderFilteredMovies(filterValue);})
 }
+
 
 function renderFilteredMovies(filter) {
     let filteredMovies = []; 
@@ -67,6 +70,16 @@ function hideLoadingState() {
     const loader = document.querySelector('.loader');
     loader.style.display = 'none';
 }
+
+
+function showDelay(delayMs, callback) {
+    showLoadingState(); // Show loading state immediately
+    setTimeout(() => {
+        callback(); // Invoke callback after delay
+        hideLoadingState(); // Hide loading state after callback completes
+    }, delayMs);
+}
+
 
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
